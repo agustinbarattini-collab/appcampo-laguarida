@@ -15,13 +15,16 @@ const routes = {
 };
 
 // Links por rol: cada uno oculta las pestañas que no le corresponden y abre
-// directo en la primera. "Maestros" queda visible para todos los roles
-// porque ahí se actualizan los datos base (lotes, insumos, etc.) desde Sheets.
-// Ejemplos de link para compartir: "https://.../?rol=granos", "?rol=siembra", "?rol=fitoinsumos".
+// directo en la primera. A pedido de La Guarida, "Maestros" NO queda
+// visible en ninguno de estos roles individuales (a diferencia de otras
+// empresas) — quien entra por un link de rol no puede tocar los maestros.
+// Ejemplos de link para compartir: "https://.../?rol=granos", "?rol=insumos",
+// "?rol=fitosanitarios", "?rol=siembra".
 const ROLES = {
-  granos: { rutas: ["carga", "maestros"] },
-  siembra: { rutas: ["siembra", "maestros"] },
-  fitoinsumos: { rutas: ["insumos", "fitosanitarios", "maestros"] },
+  granos: { rutas: ["carga"] },
+  insumos: { rutas: ["insumos"] },
+  fitosanitarios: { rutas: ["fitosanitarios"] },
+  siembra: { rutas: ["siembra"] },
 };
 const ROL_STORAGE_KEY = "appcampo_rol";
 
