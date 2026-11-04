@@ -1,4 +1,4 @@
-const CACHE_NAME = "appcampo-laguarida-v22";
+const CACHE_NAME = "appcampo-laguarida-v23";
 const APP_SHELL = [
   "./",
   "./index.html",
